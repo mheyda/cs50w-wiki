@@ -11,10 +11,9 @@
         <p>Title </br>{{ edit_form.title }}</br></br>
         Markdown Content </br> {{ edit_form.markdown_content }}</p>
         <input type="submit" value="Save Changes">
-        <form action="{% url 'edit' entry %}" method="POST">
-            {% csrf_token %}
-            <input type="submit" name="delete" value="Delete Page">
-        </form>
     </form>
-    
+    <form action="{% url 'edit' entry %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" name="delete" value="Delete Page">
+    </form>
 {% endblock %}

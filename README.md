@@ -11,4 +11,4 @@ Functionality includes:
   <li>"Random Page" button that brings you to a random entry</li>
 </ul>
 
-<p>Completed as part of Harvard CS50w.</p>
+<p>Initially completed as part of Harvard CS50w. More styling and functionality was added to make it personalized.</p>

@@ -5,13 +5,12 @@
 {% endblock %}
 
 {% block body %}
-
+    <h1>Create New Page</h1>    
     <form action="{% url 'create' %}" method="POST">
         {% csrf_token %}
-        <h1>Create New Page</h1>
-        {{ form }}
-        </br>
-        <input type="submit">
+        <p>Title </br>{{ form.title }}</br></br>
+        Markdown Content </br> {{ form.markdown_content }}</p>
+        <input type="submit" value="Save">
     </form>
 
 {% endblock %}

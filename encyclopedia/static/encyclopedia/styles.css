@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    width: 98vw;
     background-color: white;
 }
 
@@ -12,13 +13,14 @@ h1 {
     padding-top: 20px;
 }
 
-textarea {
-    height: 90vh;
-    width: 80%;
+.sidebar {
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .main {
-    padding: 10px;
+    padding: 0px 20px 20px 20px;
 }
 
 .search {
@@ -27,17 +29,74 @@ textarea {
     line-height: 15px;
 }
 
-.sidebar {
-    background-color: #f0f0f0;
-    height: 100vh;
-    padding: 20px;
-}
-
 .sidebar h2 {
     margin-top: 5px;
+}
+
+a {
+    color: #4285F4;
+}
+
+input[type=text] {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+textarea {
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 15rem;
+    width: 80%;
 }
 
 input[type=submit] {
     margin-top: 5px;
     margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    transition: 0.2s;
+}
+input[type=submit]:hover {
+    color: white;
+    background-color: #4285F4;
+    border: 1px solid #4285F4;
+    border-radius: 3px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 25vw;
+}
+
+ul > a {
+    display: inline-flex;
+    border-radius: 3px;
+    background-color: #4285F4;
+    width: 10rem;
+    height: 10rem;
+    margin: 10px 10px 10px 0px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+ul > a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+a > li {
+    color: white;
+    font-size: 1.5rem;
+}
+
+i {
+    color: #4285F4;
+}
+
+.home {
+    color: black;
+}
+.home:hover {
+    text-decoration: none;
+    color: black;
 }

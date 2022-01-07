@@ -7,9 +7,12 @@
 {% block body %}
     <h1>Search Results</h1>
 
+    {% if not message %}
+        Displaying results for "{{ q }}".
+    {% endif %}
     <ul>
         {% for entry in entries %}
-            <li><a href="/wiki/{{ entry }}">{{ entry }}</a></li>
+            <a href="/wiki/{{ entry }}"><li>{{ entry }}</li></a>
         {% endfor %}
     </ul>
     {{ message }}

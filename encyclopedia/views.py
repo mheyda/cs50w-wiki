@@ -9,7 +9,7 @@ from . import util
 
 # Form for searching for an entry
 class search_form(forms.Form):
-    query = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Search Encyclopedia', 'style': 'width:100%'}))
+    query = forms.CharField(label="", widget=forms.TextInput(attrs={'placeholder': 'Search Encyclopedia', 'style': 'width:100%', 'autocomplete': 'off'}))
 
 # Form for creating a new page
 class new_page_form(forms.Form):
@@ -72,14 +72,15 @@ def search(request):
                 return render(request, "encyclopedia/search.html", {
                     "entries": matches, 
                     "search_form": search_form,
-                    "message": ""
+                    "message": "",
+                    "q": q,
                 })
             # If no search results matched, render search template with message
             else:
                 return render(request, "encyclopedia/search.html", {
                     "entries": matches,
                     "search_form": search_form,
-                    "message": "Your search resulted in no matches."
+                    "message": "Sorry, your search resulted in no matches."
                 })
         # If the search term does match an entry, redirect to that page
         else:

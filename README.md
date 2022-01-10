@@ -1,4 +1,4 @@
-# CS50w Project 1 - Wiki
+# Wiki
 <p>A Wikipedia-style CRUD application made with Django.</p>
 
 Functionality includes:
@@ -12,3 +12,6 @@ Functionality includes:
 </ul>
 
 <p>Initially completed as part of Harvard CS50w. More styling and functionality was added to make it personalized.</p>
+
+### See it in action <a href="https://mheyda-cs50w-wiki-demo.herokuapp.com/" target="_blank"><ins>here</ins></a>*. :smile:
+*Note: Functionality for creating, editing, and deleting entries has been limited for the demo as it is a live application.

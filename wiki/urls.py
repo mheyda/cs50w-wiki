@@ -18,5 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("encyclopedia.urls"))
+    path('', include("encyclopedia.urls")),
 ]
+
+handler404 = 'encyclopedia.views.handler404'
+handler500 = 'encyclopedia.views.handler500'

@@ -44,6 +44,7 @@ def pages(request, entry):
         else:
             return render(request, "encyclopedia/entry.html", {
                 "content": markdown2.markdown(content),
+                "entry": entry,
                 "search_form": search_form, 
                 "entry": entry
             })
@@ -167,3 +168,10 @@ def saved(request, entry):
                 "search_form": search_form, 
                 "entry": title
             })
+
+    
+def handler500(request):
+    return render(request, 'encyclopedia/500.html')
+
+def handler404(request, exception):
+    return render(request, 'encyclopedia/404.html')
